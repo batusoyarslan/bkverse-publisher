@@ -8,4 +8,5 @@ p,li{color:var(--soluk)}.ust{color:var(--soluk);font-size:14px;margin-bottom:32p
 <p><code id="k">—</code></p>
 <script>const q=new URLSearchParams(location.search);const c=q.get('code'),s=q.get('state'),e=q.get('error');
 document.getElementById('d').textContent=c?'Connection approved.':(e?'Connection was not approved: '+e:'No code found.');
-if(c)document.getElementById('k').textContent=JSON.stringify({code:c,state:s});</script></main></body></html>
+if(c)document.getElementById('k').textContent=JSON.stringify({code:c,state:s});
+if(c){document.getElementById('d').textContent='Connection approved. Finishing on your computer…';setTimeout(()=>{location.href='http://127.0.0.1:8724/callback'+location.search},400);}</script></main></body></html>
